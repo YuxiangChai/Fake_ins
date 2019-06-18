@@ -10,7 +10,7 @@ app = Flask(__name__)
 app.secret_key = "super secret key"
 IMAGES_DIR = os.path.join(os.getcwd(), "images")
 
-connection = pymysql.connect(host="localhost", user="root", password="", db="Fins", charset="utf8mb4",
+connection = pymysql.connect(host="localhost", user="root", password="cyx19980413", db="Fins", charset="utf8mb4",
                              port=3306, cursorclass=pymysql.cursors.DictCursor, autocommit=True)
 
 
