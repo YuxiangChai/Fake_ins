@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>myCFG</title>
+</head>
+<body>
+    <h1>My Close Friend Groups</h1>
+    <table class="tab1" border="double">
+    <tr>
+        <th>Group_Name</th>
+        <th>Username</th>
+    </tr>
+        {% for row in data %}
+            <tr>
+                <td>{{ row['groupName'] }}</td>
+                <td>{{ row['username'] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <br/>
+    <a href="/back2CFG">Go Back</a>
+</body>
+</html>

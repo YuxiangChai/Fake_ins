@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Image Upload</title>
+    </head>
+    <body>
+        <h1>Upload an Image!</h1>
+        <div>
+            <form action="/uploadImage" method="post" enctype="multipart/form-data">
+                <input type="file" name="imageToUpload" accept="image/*">
+                <br/>
+                <input type="text" name="captionInput" placeholder="Caption Here">
+                <br/>
+                <label><input checked type="checkbox" name="allFollowerFlag" id="allFollowerFlag">Visible to All Followers?</label>
+                <br/>
+                <!--<a href="/shareCFG" id="selection">Select close friend groups. (If the photo is not shared with all followers)</a>-->
+                <!--<br/>-->
+                <!--<div id="selection" style="display:none">-->
+                    <!--<form action="/chooseCFG" method="post">-->
+                        <!--<p>Select close friend groups that you want to share with.</p>-->
+                        <!--<table class="tab1" border="double" >-->
+                            <!--<tr>-->
+                                <!--<th>Group_Name</th>-->
+                                <!--<th>Select</th>-->
+                            <!--</tr>-->
+                            <!--{% for row in data %}-->
+                            <!--<tr>-->
+                                <!--<td>{{ row['groupName'] }}</td>-->
+                                <!--<td>{{ row['groupOwner'] }}</td>-->
+                                <!--<td><input type="checkbox" name="chosen" value="{{ row['groupName'] }}"></td>-->
+                            <!--</tr>-->
+                            <!--{% endfor %}-->
+                        <!--</table>-->
+                        <!--<input type="submit" value="Confirm">-->
+                    <!--</form>-->
+                <!--</div>-->
+                <input type="submit" value="Upload" onclick="foo">
+            </form>
+        </div>
+
+        <!--<script>-->
+            <!--document.getgetElementById("selection").innerHTML="hao";-->
+            <!--&lt;!&ndash;if (document.getElementsByName("allFollowerFlag")[0].checked == false):&ndash;&gt;-->
+            <!--&lt;!&ndash;{&ndash;&gt;-->
+                <!--&lt;!&ndash;document.getElementById("selection").style.display = "inline";&ndash;&gt;-->
+            <!--&lt;!&ndash;}&ndash;&gt;-->
+
+        <!--</script>-->
+        {% if message %}
+            {{ message }}
+        {% endif %}
+        <br/>
+        <a href="/">Go back</a>
+    </body>
+</html>

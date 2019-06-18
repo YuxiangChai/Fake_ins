@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>personFile</title>
+</head>
+<body>
+    <h1>Edit Your Profile</h1>
+    <form action="/profile" method="post" enctype='multipart/form-data'>
+        <br>
+        <input type="text" placeholder="Enter your bio here." name="bio"/>
+        <br/>
+        <input type="file" name="avatar" accept="avatar/*"/>
+        <br/>
+        <input type="submit" value="Save"/>
+    </form>
+    {% if message %}
+        {{ message }}
+    {% endif %}
+    <br/>
+    <a href="/">Go Back</a>
+</body>
+</html>

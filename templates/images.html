@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Finstagram</title>
+    </head>
+    <body>
+        <h1>Image Gallery</h1>
+        <!--<div>-->
+            <!--{% for image in images %}-->
+
+            <!--<img src="/image/{{image.filePath}}" width="300"/>-->
+            <!--{% endfor %}-->
+        <!--</div>-->
+        <form action="/chooseTag" method="post">
+        <table class="tab1" border="1">
+        <tr>
+            <th>Images</th>
+            <th>Photo ID</th>
+            <th>Photo Owner</th>
+            <th>Caption</th>
+            <th>Timestamp</th>
+            <th>Tags</th>
+        </tr>
+            {% for row in data %}
+                <tr>
+                    <td><img src="/image/{{row.filePath}}" width="100"/></td>
+                    <td>{{ row['photoID'] }}</td>
+                    <td>{{ row['photoOwner'] }}</td>
+                    <td>{{ row['caption'] }}</td>
+                    <td>{{ row['timestamp'] }}</td>
+                    <td><input type="submit" name="tagbtn" value="{{ row['photoID'] }}"/> </td>
+                </tr>
+            {% endfor %}
+        </table>
+        </form>
+        <a href="/">Go back</a>
+    </body>
+</html>

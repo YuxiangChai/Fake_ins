@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Finstagram</title>
+    </head>
+    <body>
+        <h1>Hello, {{ username }}!</h1>
+        <div>
+            {% if avatar %}
+                <img src="/image/{{ avatar }}" width="100"/>
+            {% endif %}
+            {% if bio %}
+                <p>Bio: {{ bio }}</p>
+            {% endif %}
+        </div>
+        <div>
+            <ul>
+                <li><a href="/personFile">Edit Profile</a> </li>
+                <li><a href="/images">View Images</a></li>
+                <li><a href="/upload">Upload an Image</a></li>
+                <li><a href="/closeFG">Close Friend Group</a></li>
+                <li><a href="/followSystem">Follower System</a></li>
+                <li><a href="/tagSystem">Tag System</a> </li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FollowRequest</title>
+</head>
+<body>
+    <h1>Follower Requests</h1>
+    <form action="/followerAccept" method="post">
+        <table class="tab1" border="single">
+        <tr>
+            <th>Username</th>
+            <th>Accept</th>
+            <th>Decline</th>
+        </tr>
+            {% for row in data %}
+                <tr>
+                    <td>{{ row['followerUsername'] }}</td>
+                    <td><input type="checkbox" name="accept" value="{{ row['followerUsername'] }}"/></td>
+                    <td><input type="checkbox" name="decline" value="{{ row['followerUsername'] }}"/></td>
+                </tr>
+            {% endfor %}
+        </table>
+        <input type="submit" value="Confirm">
+    </form>
+
+
+    <br/>
+    <a href="/followSystem">Go Back</a>
+
+</body>
+</html>

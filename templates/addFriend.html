@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AddFriend</title>
+</head>
+<body>
+    <h1>Add A Friend to A Group</h1>
+    <div>
+        <form action="/addF" method="post">
+            <input type="text" placeholder="Friend Username" name="FriendName" required/>
+            <br/>
+            <input type="text" placeholder="Group Name" name="GroupName" required/>
+            <br/>
+            <input type="submit" value="submit"/>
+        </form>
+    </div>
+    {% if message %}
+        {{ message }}
+    {% endif %}
+    <br/>
+    <a href="/back2CFG">Go Back</a>
+</body>
+</html>

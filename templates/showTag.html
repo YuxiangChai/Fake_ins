@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>showTag</title>
+</head>
+<body>
+    <h1>Tags of the Image</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+        </tr>
+        {% for row in data %}
+            <tr>
+                <td>{{ row['fname'] }} {{ row['lname'] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <br/>
+    <a href="/images">Go Back</a>
+</body>
+</html>

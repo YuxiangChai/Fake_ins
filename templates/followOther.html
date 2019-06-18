@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>followOther</title>
+</head>
+<body>
+    <h1>Follow My Friend</h1>
+    <div>
+        <form action="/Fother" method="post">
+            <input type="text" placeholder="Username" name="Fusername" required/>
+            <br/>
+            <input type="submit" value="submit"/>
+        </form>
+    </div>
+
+    {% if message %}
+        {{ message }}
+    {% endif %}
+    <br/>
+    <br/>
+    <a href="/followSystem">Go Back</a>
+</body>
+</html>

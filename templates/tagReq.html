@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tagReq</title>
+</head>
+<body>
+    <h1>Tag Requests</h1>
+    <form action="/tagAccept" method="post">
+        <table class="tab1" border="single">
+        <tr>
+            <th>Images</th>
+            <th>Accept</th>
+            <th>Decline</th>
+        </tr>
+            {% for row in data %}
+                <tr>
+                    <td><img src="/image/{{row.filePath}}" width="100"/></td>
+                    <td><input type="checkbox" name="accept" value="{{ row['photoID'] }}"/></td>
+                    <td><input type="checkbox" name="decline" value="{{ row['photoID'] }}"/></td>
+                </tr>
+            {% endfor %}
+        </table>
+        <input type="submit" value="Confirm">
+    </form>
+
+
+    <br/>
+    <a href="/tagSystem">Go Back</a>
+</body>
+</html>
